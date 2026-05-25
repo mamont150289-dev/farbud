@@ -123,32 +123,7 @@
         </div>
     </section>
 
-    <section class="py-5 bg-white border-top">
-        <div class="container">
-            <h3 class="fw-bold text-center mb-4"><i class="bi bi-database-fill text-warning me-2"></i>Ваша база заявок (Журнал лідів)</h3>
-            <p class="text-muted text-center small">Ця панель працює локально на твоєму ПК. Сюди автоматично зберігаються дані всіх клієнтів.</p>
-            <div class="table-responsive shadow-sm rounded">
-                <table class="table table-bordered table-striped align-middle mb-0 text-center">
-                    <thead class="leads-table">
-                        <tr>
-                            <th>#</th>
-                            <th>Дата й час</th>
-                            <th>Ім'я клієнта</th>
-                            <th>Номер телефону</th>
-                        </tr>
-                    </thead>
-                    <tbody id="leadsTableBody">
-                        <tr>
-                            <td colspan="4" class="text-muted py-3">Заявок поки немає. Заповніть форму вище, щоб протестувати!</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="text-center mt-3">
-                <button onclick="clearLeads()" class="btn btn-outline-danger btn-sm"><i class="bi bi-trash me-1"></i>Очистити всю базу</button>
-            </div>
-        </div>
-    </section>
+    
 
     <div class="modal fade" id="thankYouModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -225,15 +200,6 @@
                 }
             }).catch(error => console.error('Помилка мережі:', error));
 
-            // 3. Дублюємо запис у нашу локальну таблицю на комп'ютері
-            const newLead = { name: name, phone: phone, date: currentDateTime };
-            const leads = JSON.parse(localStorage.getItem('farbud_leads')) || [];
-            leads.unshift(newLead);
-            localStorage.setItem('farbud_leads', JSON.stringify(leads));
-
-            // Оновлюємо інтерфейс
-            displayLeads();
-
             // Показуємо вікно подяки
             const thankYouModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
             thankYouModal.show();
@@ -241,29 +207,4 @@
             // Очищаємо поля
             form.reset();
         });
-
-        function clearLeads() {
-            if (confirm("Ви дійсно хочете видалити всі збережені заявки з журналу лідів?")) {
-                localStorage.removeItem('farbud_leads');
-                displayLeads();
-            }
-        }
-
-        window.onload = displayLeads;
-    </script>
-        // Функція для виведення заявок на екран
-        function displayLeads() {
-            const leads = JSON.parse(localStorage.getItem('farbud_leads')) || [];
-            const tableBody = document.getElementById('leadsTableBody');
-            
-            if (leads.length === 0) {
-                tableBody.innerHTML = `<tr><td colspan="4" class="text-muted py-3">Заявок поки немає. Заповніть форму вище, щоб протестувати!</td></tr>`;
-                return;
-            }
-            
-            tableBody.innerHTML = '';
-            leads.forEach((lead, index) => {
-                const row = `<tr>
-                    <td><strong>${index + 1}</strong></td>
-                    <td class="small text-muted">${lead.date}</td>
-                    <td><strong>${lead.
+        </script>
