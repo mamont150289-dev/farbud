@@ -8,38 +8,24 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
     
     <style>
-        :root { 
-            --main-color: #2b3a42; 
-            --accent-color: #f4a261; 
-            --light-bg: #f8f9fa; 
-        }
+        :root { --main-color: #2b3a42; --accent-color: #f4a261; }
         body { font-family: 'Segoe UI', sans-serif; color: #333; scroll-behavior: smooth; }
         .btn-phone { background-color: var(--main-color); color: white; font-weight: 600; }
         .btn-phone:hover { background-color: #1a252c; color: white; }
-        
-        .hero-section { 
-            background: linear-gradient(rgba(43, 58, 66, 0.85), rgba(43, 58, 66, 0.85)), url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1920') no-repeat center center/cover; 
-            padding: 120px 0; 
-            color: white; 
-        }
+        .hero-section { background: linear-gradient(rgba(43, 58, 66, 0.85), rgba(43, 58, 66, 0.85)), url('house1.jpg') no-repeat center center/cover; padding: 120px 0; color: white; }
         .hero-title { font-size: 2.8rem; font-weight: 700; }
         .hero-title span { color: var(--accent-color); }
-        
         .btn-cta { background-color: var(--accent-color); color: #fff; padding: 12px 30px; font-weight: 600; border: none; }
         .btn-cta:hover { background-color: #e76f51; color: #fff; }
-        
         .btn-telegram { background-color: #2481cc; color: white; padding: 12px 25px; margin-left: 15px; text-decoration: none; display: inline-flex; align-items: center; }
         .btn-telegram:hover { background-color: #1a67a3; color: white; }
-        
-        .feature-box { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%; }
         .portfolio-card { border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-radius: 12px; overflow: hidden; transition: 0.3s; height: 100%; }
         .portfolio-card:hover { transform: translateY(-5px); }
         .portfolio-img { height: 240px; object-fit: cover; width: 100%; }
-        
         .contact-section { background-color: #2b3a42; color: white; }
-        .form-control, .form-select { padding: 12px; border-radius: 6px; }
-        
+        .form-control { padding: 12px; border-radius: 6px; }
         footer { background-color: #1a252c; color: #a0aab0; }
+        .leads-table th { background-color: var(--main-color); color: white; }
     </style>
 </head>
 <body>
@@ -47,9 +33,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="#"><i class="bi bi-house-gear-fill text-warning me-2"></i><strong>ФарБуд</strong></a>
-            <div class="ms-auto">
-                <a href="tel:+380952306614" class="btn btn-phone btn-sm px-3">+38 (095) 230-66-14</a>
-            </div>
+            <div class="ms-auto"><a href="tel:+380952306614" class="btn btn-phone btn-sm px-3">+38 (095) 230-66-14</a></div>
         </div>
     </nav>
 
@@ -57,8 +41,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <h1 class="hero-title">Будівництво капітальних будинків <span>під ключ</span> у Дніпрі, Самарі та області</h1>
-                    <p class="hero-subtitle lead my-4">Від проектування та фундаменту до фінішного оздоблення. Суворо за договором, з фіксованим кошторисом та фотозвітом на кожному етапі.</p>
+                    <h1 class="hero-title">Будівництво капітальних будинків <span>під ключ</span> у Дніпрі, Самар та області</h1>
+                    <p class="hero-subtitle lead my-4">Від надійного фундаменту до покрівлі та фінішного оздоблення. Суворо за договором, з фіксованим кошторисом та регулярними фотозвітами для вашого спокою.</p>
                     <div class="d-flex flex-column flex-sm-row">
                         <a href="#order-form" class="btn btn-cta rounded-pill text-center text-decoration-none shadow"><i class="bi bi-calculator me-2"></i>Розрахувати вартість</a>
                         <a href="https://t.me/FarBud1502" target="_blank" class="btn btn-telegram rounded-pill shadow justify-content-center"><i class="bi bi-telegram me-2"></i>Зв'язатися у Telegram</a>
@@ -68,73 +52,44 @@
         </div>
     </header>
 
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-4 text-center">
-                    <div class="feature-box">
-                        <div class="text-warning fs-2 mb-2"><i class="bi bi-file-earmark-text"></i></div>
-                        <h5>Прозорий кошторис</h5>
-                        <p class="text-muted">Ціна фіксується в договорі. Жодних прихованих чи неочікуваних платежів у процесі будівництва.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="feature-box">
-                        <div class="text-warning fs-2 mb-2"><i class="bi bi-camera-video"></i></div>
-                        <h5>Контроль 24/7</h5>
-                        <p class="text-muted">Надсилаємо щотижневі фото- та відеозвіти. Ви завжди бачите реальний прогрес на об'єкті.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="feature-box">
-                        <div class="text-warning fs-2 mb-2"><i class="bi bi-shield-check"></i></div>
-                        <h5>Комплексний підхід</h5>
-                        <p class="text-muted">Беремо на себе все: від аналізу вашої ділянки та закупівлі матеріалів до фінішного прибирання.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-<section class="py-5">
+    <section class="py-5">
         <div class="container">
             <h2 class="text-center mb-5 fw-bold">Що входить у будівництво «під ключ»</h2>
-            <div class="row g-4">
-                <div class="col-md-3"><div class="card p-4 h-100 bg-light border-0"><h5>1. Проектування</h5><p class="small text-muted">Аналіз ґрунту, планування та повна архітектурна documentation.</p></div></div>
-                <div class="col-md-3"><div class="card p-4 h-100 bg-light border-0"><h5>2. Коробка будинку</h5><p class="small text-muted">Земляні роботи, заливка фундаменту, зведення міцних стін з газоблоку та покрівля.</p></div></div>
-                <div class="col-md-3"><div class="card p-4 h-100 bg-light border-0"><h5>3. Комунікації</h5><p class="small text-muted">Монтаж та розведення інженерних мереж: електрика, опалення, водопостачання та каналізація.</p></div></div>
-                <div class="col-md-3"><div class="card p-4 h-100 bg-light border-0"><h5>4. Оздоблення</h5><p class="small text-muted">Штукатурка, стяжка підлоги, плитка та підготовка будинку до вселення.</p></div></div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4"><div class="card p-4 h-100 bg-light border-0"><h5>1. Коробка будинку</h5><p class="text-muted">Земляні роботи, заливка надійного фундаменту, зведення стін з газоблоку та монтаж кроквяної системи й покрівлі.</p></div></div>
+                <div class="col-md-4"><div class="card p-4 h-100 bg-light border-0"><h5>2. Комунікації</h5><p class="text-muted">Монтаж та повне розведення інженерних мереж: безпечна електрика, опалення, водопостачання та каналізація.</p></div></div>
+                <div class="col-md-4"><div class="card p-4 h-100 bg-light border-0"><h5>3. Оздоблення</h5><p class="text-muted">Машинна або ручна штукатурка, рівна стяжка підлоги, облицювальні роботи та підготовка будинку до вселення.</p></div></div>
             </div>
         </div>
     </section>
-
-    <section class="py-5 bg-light">
+<section class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5 fw-bold">Наші останні об'єкти (Газобетон)</h2>
+            <h2 class="text-center mb-5 fw-bold">Наші реальні об'єкти (Газобетон)</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card portfolio-card">
-                        <img src="https://images.unsplash.com/photo-1599809275671-b5942cabc7a2?q=80&w=600" class="portfolio-img">
+                        <img src="house1.jpg" class="portfolio-img" alt="Сучасний будинок з навісом ФарБуд">
                         <div class="card-body">
-                            <h5 class="fw-bold">Будинок з односхилим дахом</h5>
-                            <p class="small text-muted">Сучасний лофт-стиль, стіни з якісного газобетону, відкрите функціональне планування.</p>
+                            <h5 class="fw-bold">Оригінальний проект з комбінованим дахом та навісом</h5>
+                            <p class="small text-muted">Етап завершення кладки стін з газобетону та монтажу металочерепиці. Надійний та просторий варіант.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card portfolio-card">
-                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=600" class="portfolio-img">
+                        <img src="house2.png" class="portfolio-img" alt="Будинок з чотирьохсхилим дахом ФарБуд">
                         <div class="card-body">
-                            <h5 class="fw-bold">Класика (двосхилий дах)</h5>
-                            <p class="small text-muted">Надійний, теплий та практичний проект, енергоефективні стіни, перевірене часом рішення.</p>
+                            <h5 class="fw-bold">Класика з чотирьохсхилим дахом</h5>
+                            <p class="small text-muted">Енергоефективний одноповерховий будинок. Виконано декоративне оздоблення фасаду, облицювання клінкером та благоустрій.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card portfolio-card">
-                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=600" class="portfolio-img">
+                        <img src="house3.jpg" class="portfolio-img" alt="Будинок з газоблоку ФарБуд">
                         <div class="card-body">
-                            <h5 class="fw-bold">Будинок з чотирьохсхилим дахом</h5>
-                            <p class="small text-muted">Популярне капітальне рішення, міцний та стійкий дах вальмового типу, газоблок.</p>
+                            <h5 class="fw-bold">Будинок з газоблоку</h5>
+                            <p class="small text-muted"><Будинок з комбіновоним дахом та газоблоку .</p>
                         </div>
                     </div>
                 </div>
@@ -147,28 +102,19 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center mb-4">
                     <h2 class="fw-bold">Дізнайтеся вартість вашого будинку</h2>
-                    <p class="text-white-50">Залиште заявку, і we безкоштовно розрахуємо попередній кошторис під ваші завдання</p>
+                    <p class="text-white-50">Залиште заявку, і we безкоштовно проконсультуємо вас та розрахуємо попередній кошторис</p>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <form action="#" method="POST" class="bg-white p-4 rounded shadow text-dark">
+                    <form id="leadForm" action="https://formspree.io/f/mlgvprbk" method="POST" class="bg-white p-4 rounded shadow text-dark">
                         <div class="mb-3">
                             <label class="form-label fw-bold">Ваше ім'я</label>
-                            <input type="text" class="form-control" placeholder="Іван" required>
+                            <input type="text" id="clientName" class="form-control" placeholder="Іван" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label fw-bold">Номер телефону</label>
-                            <input type="tel" class="form-control" placeholder="+38 (095) 230-66-14" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label fw-bold">Який дах плануєте?</label>
-                            <select class="form-select">
-                                <option>Односхилий</option>
-                                <option>Двосхилий</option>
-                                <option>Чотирьохсхилий (вальмовий)</option>
-                                <option>Ще не визначився</option>
-                            </select>
+                            <input type="tel" id="clientPhone" class="form-control" placeholder="+38 (095) 230-66-14" required>
                         </div>
                         <button type="submit" class="btn btn-cta w-100 rounded mt-2">Отримати безкоштовний розрахунок</button>
                     </form>
@@ -177,18 +123,147 @@
         </div>
     </section>
 
-    <footer class="py-4 text-center">
+    <section class="py-5 bg-white border-top">
         <div class="container">
-            <p class="mb-2 fw-bold text-white">ФарБуд — Надійне будівництво з газобетону під ключ</p>
-            <p class="small mb-3">Працюємо: Дніпро, Самар та Дніпропетровська область</p>
-            <div class="fs-4 mb-3">
-                <a href="https://t.me/FarBud1502" target="_blank" class="text-white me-3"><i class="bi bi-telegram"></i></a>
-                <a href="tel:+380952306614" class="text-white"><i class="bi bi-telephone-outbound-fill"></i></a>
+            <h3 class="fw-bold text-center mb-4"><i class="bi bi-database-fill text-warning me-2"></i>Ваша база заявок (Журнал лідів)</h3>
+            <p class="text-muted text-center small">Ця панель працює локально на твоєму ПК. Сюди автоматично зберігаються дані всіх клієнтів.</p>
+            <div class="table-responsive shadow-sm rounded">
+                <table class="table table-bordered table-striped align-middle mb-0 text-center">
+                    <thead class="leads-table">
+                        <tr>
+                            <th>#</th>
+                            <th>Дата й час</th>
+                            <th>Ім'я клієнта</th>
+                            <th>Номер телефону</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leadsTableBody">
+                        <tr>
+                            <td colspan="4" class="text-muted py-3">Заявок поки немає. Заповніть форму вище, щоб протестувати!</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <p class="small text-muted mb-0">&copy; 2026 Всі права захищені.</p>
+            <div class="text-center mt-3">
+                <button onclick="clearLeads()" class="btn btn-outline-danger btn-sm"><i class="bi bi-trash me-1"></i>Очистити всю базу</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="thankYouModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-dark">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center pb-5">
+                    <i class="bi bi-check-circle-fill text-success" style="font-size: 4rem;"></i>
+                    <h3 class="fw-bold mt-3">Заявку прийнято!</h3>
+                    <p class="text-muted lead">Дякуємо за звернення. Ми зв'яжемося з вами найближчим часом для розрахунку вартості будинку.</p>
+                    <button type="button" class="btn btn-phone px-4 py-2 mt-3 rounded-pill" data-bs-dismiss="modal">Зрозуміло</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-4 text-center text-white">
+        <div class="container">
+            <p class="mb-2 fw-bold">ФарБуд — Надійне будівництво з газобетону під ключ</p>
+            <p class="small mb-3">Дніпро, Самар та Дніпропетровська область</p>
+            <p class="small text-muted mb-0">Тел: 0952306614 | Telegram: @FarBud1502</p>
         </div>
     </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function displayLeads() {
+            const leads = JSON.parse(localStorage.getItem('farbud_leads')) || [];
+            const tableBody = document.getElementById('leadsTableBody');
+            
+            if (leads.length === 0) {
+                tableBody.innerHTML = `<tr><td colspan="4" class="text-muted py-3">Заявок поки немає. Заповніть форму вище, щоб протестувати!</td></tr>`;
+                return;
+            }
+            
+            tableBody.innerHTML = '';
+            leads.forEach((lead, index) => {
+                const row = `<tr>
+                    <td><strong>${index + 1}</strong></td>
+                    <td class="small text-muted">${lead.date}</td>
+                    <td><strong>${lead.name}</strong></td>
+                    <td><a href="tel:${lead.phone}" class="text-decoration-none fw-bold text-success"><i class="bi bi-telephone-fill me-1"></i>${lead.phone}</a></td>
+                </tr>`;
+                tableBody.innerHTML += row;
+            });
+        }
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+        // Модифікована обробка форми для Formspree та Telegram
+        document.getElementById('leadForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Зупиняємо стандартний редірект
+            
+            const form = event.target;
+            const data = new FormData(form);
+            
+            const name = document.getElementById('clientName').value;
+            const phone = document.getElementById('clientPhone').value;
+            const currentDateTime = new Date().toLocaleString('uk-UA');
+
+            // 1. Додаємо дані для передачі у Formspree (щоб вони прийшли в Телеграм з правильними мітками)
+            data.append('Ім\'я клієнта', name);
+            data.append('Телефон', phone);
+            data.append('Дата заявки', currentDateTime);
+
+            // 2. Відправляємо запис на сервер Formspree в фоновому режимі
+            fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    console.log('Заявка успішно надіслана в Telegram!');
+                } else {
+                    console.error('Помилка відправки на сервер.');
+                }
+            }).catch(error => console.error('Помилка мережі:', error));
+
+            // 3. Дублюємо запис у нашу локальну таблицю на комп'ютері
+            const newLead = { name: name, phone: phone, date: currentDateTime };
+            const leads = JSON.parse(localStorage.getItem('farbud_leads')) || [];
+            leads.unshift(newLead);
+            localStorage.setItem('farbud_leads', JSON.stringify(leads));
+
+            // Оновлюємо інтерфейс
+            displayLeads();
+
+            // Показуємо вікно подяки
+            const thankYouModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+            thankYouModal.show();
+
+            // Очищаємо поля
+            form.reset();
+        });
+
+        function clearLeads() {
+            if (confirm("Ви дійсно хочете видалити всі збережені заявки з журналу лідів?")) {
+                localStorage.removeItem('farbud_leads');
+                displayLeads();
+            }
+        }
+
+        window.onload = displayLeads;
+    </script>
+        // Функція для виведення заявок на екран
+        function displayLeads() {
+            const leads = JSON.parse(localStorage.getItem('farbud_leads')) || [];
+            const tableBody = document.getElementById('leadsTableBody');
+            
+            if (leads.length === 0) {
+                tableBody.innerHTML = `<tr><td colspan="4" class="text-muted py-3">Заявок поки немає. Заповніть форму вище, щоб протестувати!</td></tr>`;
+                return;
+            }
+            
+            tableBody.innerHTML = '';
+            leads.forEach((lead, index) => {
+                const row = `<tr>
+                    <td><strong>${index + 1}</strong></td>
+                    <td class="small text-muted">${lead.date}</td>
+                    <td><strong>${lead.
